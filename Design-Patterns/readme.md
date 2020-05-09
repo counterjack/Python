@@ -42,5 +42,23 @@ Helps in building complex logic using simple objects. It builds the final object
 
 
 ## Strategy
-Used in various framewors to provide users a way to change the behaviour of a class without extending. 
+Used in various frameworks to provide users a way to change the behaviour of a class without extending. 
 
+## Chain of Responsibility
+
+This design patterns allows passing request along the chain of potential handlers until one of them handles request
+
+Ref: https://refactoring.guru/design-patterns/chain-of-responsibility/python/example
+
+Pros:
+- Flexibility on making the chain of handlers
+- Each handler is responsible for it's own responsibility. i.e no dependancy and self contained
+
+Cons
+- there may be some requests which may not be processed by any handler
+
+
+## Command
+
+
+## Decorator
