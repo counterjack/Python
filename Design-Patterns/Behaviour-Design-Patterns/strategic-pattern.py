@@ -7,15 +7,16 @@ class Strategy:
 
     def __init__(self, name='Strategy Example 0', func=None):
         self.name = name
-        if (func):
+        if func:
             self.execute = types.MethodType(func, self)
-
 
     def execute(self):
         print (self.name)
 
+
 def execute_replacement1(self):
     print(self.name + 'from execute 1')
+
 
 def execute_replacement2(self):
     print(self.name + 'from execute 2')
@@ -39,7 +40,6 @@ strat2.execute()
 strat3.execute(strat3)
 
 
-
 class PaymentMode(abc.ABC):
 
     @abc.abstractmethod
@@ -49,7 +49,7 @@ class PaymentMode(abc.ABC):
 
 class CardPayment(PaymentMode):
 
-    def pay(self, amount, **kwargs):
+    def pay(self, amount: float, **kwargs):
         print ("Payment Made by card")
 
 
@@ -75,11 +75,11 @@ class Payment:
         self._payment.pay(amount, **kwargs)
 
 
-amount = 100
+_amount = 100
 
 cash_payment = Payment(CashPayment())
-cash_payment.make_payment(amount)
+cash_payment.make_payment(_amount)
 
 
 card_payment = Payment(CardPayment())
-card_payment.make_payment(amount)
+card_payment.make_payment(_amount)

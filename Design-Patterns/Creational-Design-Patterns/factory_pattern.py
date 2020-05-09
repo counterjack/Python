@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import abc
+import enum
+# Example 1
 
 
 class Shape:
@@ -46,7 +48,53 @@ shape_factory.register(**{"shape_name": "Triangle", "shape_class": Triangle})
 
 square = shape_factory.get_shape("Square")
 triangle = shape_factory.get_shape("Triangle")
-# hexagonal = shape_factory.get_shape("Hexagonal")
 
-square.draw()
+
+# Example 2
+
+
+class VehicleEnum(enum.Enum):
+    TWO_WHEELER = "Two Wheeler"
+    FOUR_WHEELER = "Four Wheeler"
+
+
+class Vehicle(abc.ABC):
+    tyres = None
+
+    def __init__(self, *args, **kwargs):
+        pass
+
+    def get_tyres(self):
+        return self.tyres
+
+
+class TwoWheeler(Vehicle):
+    tyres = 2
+
+
+class FourWheeler(Vehicle):
+    tyres = 4
+
+
+class VehicleFactory:
+    _vehicles = {
+        VehicleEnum.TWO_WHEELER.value: TwoWheeler,
+        VehicleEnum.FOUR_WHEELER.value: FourWheeler
+    }
+
+    def __init__(self) -> None:
+        pass
+
+    def register(self, vehicle: Vehicle):
+        pass
+
+    @staticmethod
+    def get_vehicle(vehicle_type: str):
+        return VehicleFactory._vehicles[vehicle_type]()
+
+
+four_wheeler = VehicleFactory.get_vehicle(VehicleEnum.FOUR_WHEELER.value)
+
+print (four_wheeler.get_tyres())
+
 
