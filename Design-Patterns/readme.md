@@ -32,6 +32,7 @@ Usage: Django test Factory methods
     2 wheeler taxi (say BikeTaxi) then you have to change your entire code base. Better, Use a VehicleFactory class
     over the Vehicle Base class and use that VehicleFactory class to instantiate a new vehicle. 
 
+
 ### Singleton
 Allow only one object to create
 Usage: Logger, Terminal, DB Connection
@@ -43,6 +44,8 @@ Helps in building complex logic using simple objects. It builds the final object
 
 ## Strategy
 Used in various frameworks to provide users a way to change the behaviour of a class without extending. 
+Eg: Various Payment modes, Different types of notification to users (email/message/sms)
+
 
 ## Chain of Responsibility
 
@@ -59,6 +62,36 @@ Cons
 
 
 ## Command
+Ref: https://refactoring.guru/design-patterns/command
 
+- When to use
+The conversion allows deferred or remote execution of commands, storing command history, etc.
+
+
+Provides a clear separation between client and server by bringing the concept
+of sender and receiver.
+
+Eg: Email Abstract Command Implementation
 
 ## Decorator
+
+## Iterator
+Ref: https://refactoring.guru/design-patterns/iterator
+
+- Allow traverse on the set of elements without exposing it's underlying representation.
+
+Why ?
+- The main idea of the Iterator pattern is to extract the traversal behavior of a collection
+ into a separate object called an iterator.
+ 
+ ## Observer
+ Ref: https://refactoring.guru/design-patterns/observer/python/example
+ 
+
+ The Observer pattern provides a way to subscribe and unsubscribe to and from these events 
+ for any object that implements a subscriber interface.
+ 
+ Eg: Notifying user for some events, stock market updates
+ 
+ 
+ 
