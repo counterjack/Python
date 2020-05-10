@@ -9,7 +9,7 @@ https://refactoring.guru/design-patterns
     Creational                      Behavioural                         Structural
 
     |_  Factory
-    |_  Abstact Factory                                                 |_ Decorator
+    |_  Abstact Factory             |_ Template Method                  |_ Decorator
     |_  Singleton                   |_ Strategy                         |_ Adaptor
     |_  Builder                     |_ Observer                         |_ Bridge
     |_  Prototype                   |_ Iterator                         |_ Composite
@@ -73,7 +73,10 @@ of sender and receiver.
 
 Eg: Email Abstract Command Implementation
 
-## Decorator
+## Decorator (TODO)
+
+Ref: https://refactoring.guru/design-patterns/decorator/python/example
+
 
 ## Iterator
 Ref: https://refactoring.guru/design-patterns/iterator
@@ -93,5 +96,25 @@ Why ?
  
  Eg: Notifying user for some events, stock market updates
  
+ 
+ ## Template Method
+ Ref: https://refactoring.guru/design-patterns/template-method
+ 
+ - Template Method is a behavioral design pattern that defines the skeleton of an algorithm 
+ in the superclass but lets subclasses override specific steps of the algorithm without 
+ changing its structure.
+ 
+ Eg: Data Mining process on various doc formats. 
+ 
+ Steps: Open file -> Extract Data -> parse data -> Analyze data -> Send Report -> Close file 
+In above steps: 
+ Analyze and send report method will be same for each type of docs.
+ 
+ 
+ ### Facade Pattern
+ Eg: https://refactoring.guru/design-patterns/facade
+ 
+ - Facade is a structural design pattern that provides a simplified (but limited) interface 
+ to a complex system of classes, library or framework.
  
  
