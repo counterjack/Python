@@ -41,6 +41,8 @@ Usage: Logger, Terminal, DB Connection
 ### Builder
 Helps in building complex logic using simple objects. It builds the final object step by step
 
+Ref: https://refactoring.guru/design-patterns/builder/python/example
+
 
 ## Strategy
 Used in various frameworks to provide users a way to change the behaviour of a class without extending. 
