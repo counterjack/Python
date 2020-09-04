@@ -41,11 +41,14 @@ Usage: Logger, Terminal, DB Connection
 ### Builder
 Helps in building complex logic using simple objects. It builds the final object step by step
 
+Ref: https://refactoring.guru/design-patterns/builder/python/example
+
 
 ## Strategy
 Used in various frameworks to provide users a way to change the behaviour of a class without extending. 
 Eg: Various Payment modes, Different types of notification to users (email/message/sms)
 
+Ref: https://python-3-patterns-idioms-test.readthedocs.io/en/latest/FunctionObjects.html#strategy-choosing-the-algorithm-at-runtime
 
 ## Chain of Responsibility
 
